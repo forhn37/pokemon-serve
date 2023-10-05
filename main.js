@@ -10,16 +10,19 @@ const server = http.createServer(function(request, response) {
     </head>
     <body>
     <a href="http://localhost:5800/hana">hyun</a>
+    <br>
     <a href="http://localhost:5800/hahyun">hana</a>
+    <br>
     <a href="http://localhost:5800/hamin">hahyun</a>
+    <br>
     <a href="http://localhost:5800/hyun">hamin</a>
-    <style>
+    <script>
     let a = document.getElementsByTagName("a")
     for(let i=0; i<a.length; i++) {
     a[i].style.color = "blue";
     a[i].style.fontSize = "50px";
     }
-    </style>
+    </script>
     </body>
     </html>`
     response.writeHead(200,{"Content-Type" : "text/html"})
@@ -64,7 +67,7 @@ const server = http.createServer(function(request, response) {
     <head>
     </head>
     <body>
-    <a href="http://localhost:5800/hyun">hamin</a>
+    <a href="http://localhost:5800/">hamin</a>
     </body>
     </html>`
     response.writeHead(200, {"Content-Type" : "text/html"})
