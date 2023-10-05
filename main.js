@@ -12,6 +12,12 @@ const server = http.createServer(function(request, response) {
     <a href="http://localhost:5800/hahyun">hana</a>
     <a href="http://localhost:5800/hamin">hahyun</a>
     <a href="http://localhost:5800/hyun">hamin</a>
+    <style>
+    let a = document.getElementsTagName("a")
+    for(let i=0; i<a.length; a++) {
+    a[i].Style.Color = "blue"
+    }
+    </style>
     </body>
     </html>`
     response.writeHead(200,{"Content-Type" : "text/html"})
