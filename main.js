@@ -1,6 +1,7 @@
 const http = require('http')
 // console.log(http)
 // http변수에 http모듈을 가져오는 것을 변수로 저장
+
 const server = http.createServer(function(request, response) {
   if(request.url === "/") {
     let doc = 
@@ -13,9 +14,10 @@ const server = http.createServer(function(request, response) {
     <a href="http://localhost:5800/hamin">hahyun</a>
     <a href="http://localhost:5800/hyun">hamin</a>
     <style>
-    let a = document.getElementsTagName("a")
-    for(let i=0; i<a.length; a++) {
-    a[i].Style.Color = "blue"
+    let a = document.getElementsByTagName("a")
+    for(let i=0; i<a.length; i++) {
+    a[i].style.color = "blue";
+    a[i].style.fontSize = "50px";
     }
     </style>
     </body>
