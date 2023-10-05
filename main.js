@@ -8,21 +8,58 @@ const server = http.createServer(function(request, response) {
     <head>
     </head>
     <body>
-    <a href="http://localhost:5800/sub">main</a>
+    <a href="http://localhost:5800/hana">hyun</a>
+    <a href="http://localhost:5800/hahyun">hana</a>
+    <a href="http://localhost:5800/hamin">hahyun</a>
+    <a href="http://localhost:5800/hyun">hamin</a>
     </body>
     </html>`
     response.writeHead(200,{"Content-Type" : "text/html"})
     response.end(doc)
   }
-  if(request.url === "/sub") {
+  if(request.url === "/hyun") {
+    let doc = 
+    `<html>
+    <head>
+    </head>
+    <body>
+    <a href="http://localhost:5800/hana">hyun</a>
+    </body>
+    </html>`
+    response.writeHead(200,{"Content-Type" : "text/html"})
+    response.end(doc)
+  }
+  if(request.url === "/hana") {
     let doc =`<html>
     <head>
     </head>
     <body>
-    <a href="http://localhost:5800/">sub</a>
+    <a href="http://localhost:5800/hahyun">hana</a>
     </body>
     </html>`
     response.writeHead(200, {"Content-Type" : "text/html"})
     response.end(doc);
+  }
+  if(request.url === "/hahyun") {
+    let doc =`<html>
+    <head>
+    </head>
+    <body>
+    <a href="http://localhost:5800/hamin">hahyun</a>
+    </body>
+    </html>`
+    response.writeHead(200, {"Content-Type" : "text/html"})
+    response.end(doc)
+  }
+  if(request.url === "/hamin") {
+    let doc =`<html>
+    <head>
+    </head>
+    <body>
+    <a href="http://localhost:5800/hyun">hamin</a>
+    </body>
+    </html>`
+    response.writeHead(200, {"Content-Type" : "text/html"})
+    response.end(doc)
   }
 }).listen(5800)
